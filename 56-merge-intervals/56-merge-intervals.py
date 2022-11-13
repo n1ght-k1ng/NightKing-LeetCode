@@ -25,6 +25,7 @@ class Solution:
             else:
                 res.append(i)
         return res
+    
         
     # and A[i][1] > A[i+1][1]):
         
