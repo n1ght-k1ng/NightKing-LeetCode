@@ -41,21 +41,22 @@ class Solution:
                 
 #         return max1
                 
-        l = len(s)
-        if l < 2:
-            return l 
-
-        res = 0
-        i = 0 
-        for j in range(1, len(s)):
-            if s[j] in s[i:j]: # duplicate found !
-                print (s[i:j])
-                res = max(res, len(s[i:j]))
-                while s[j] in s[i:j]: # search new beginning of substring
-                    i += 1
-            elif j == len(s) - 1: # special for the last char
-                res = max(res, len(s[i:j + 1]))
-        return res  
+        if len(s) < 2:
+            return len(s)
+        
+        
+        res = 0 
+        i = 0
+        for j in range(1,len(s)):
+            
+            if s[j] in s[i:j]:
+                res = max(res,len(s[i:j]))
+                while s[j] in s[i:j]:
+                    i+=1
+            elif j == len(s)-1:
+                res = max(res,len(s[i:j +1]))
+            
+        return res
                 
                 
                 
