@@ -1,15 +1,15 @@
 class Solution:
     def nextGreatestLetter(self, letters: List[str], target: str) -> str:
         st = 0 
-        end = len(letters) 
-        while(st<end):
+        end = len(letters) -1
+        while(st<=end):
             
             mid = st + ((end-st)//2)
             if target >= letters[int(mid)]:
                 
                 st = mid +1 
             else :
-                end = mid 
+                end = mid -1
            
         return letters[st%len(letters)]
     
