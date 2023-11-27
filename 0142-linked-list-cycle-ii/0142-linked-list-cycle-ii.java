@@ -28,7 +28,6 @@ public class Solution {
         }
         int index = 0;
         while(copy != null){
-            
             do{
                 if (slow == copy){
                     return copy;
