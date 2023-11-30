@@ -29,8 +29,6 @@ class Solution {
         if(k == 0){
             return head;
         }
-        System.out.println("k " + k);
-
         ListNode tail = new ListNode(0);
         while(k>0){
             ListNode start = head;
@@ -38,8 +36,6 @@ class Solution {
                 head = head.next;
             }
             tail = head.next;
-            System.out.println("head " + head.val);
-            System.out.println("tail " + tail.val);
             head.next = null;
             tail.next = start;
             head = tail;
