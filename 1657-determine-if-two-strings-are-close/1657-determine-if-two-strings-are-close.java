@@ -1,12 +1,5 @@
 class Solution {
     public boolean closeStrings(String word1, String word2) {
-        char[] charArray1 = word1.toCharArray();
-        char[] charArray2 = word2.toCharArray();
-        Arrays.sort(charArray1);
-        Arrays.sort(charArray2);
-        word1 = new String(charArray1);
-        word2 = new String(charArray2);
-        System.out.println(word1 + " " + word2);
         HashMap<Character, Integer> map1 = new HashMap<>();
         HashMap<Character, Integer> map2 = new HashMap<>();
         
