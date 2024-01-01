@@ -4,7 +4,6 @@ class Solution {
         Arrays.sort(s);
         int i =0;
         int c = 0;
-        int len = (g.length < s.length)? g.length : s.length;
         while(c < g.length && i < s.length){
             if(g[c] <= s[i]){
                 c++;
@@ -13,6 +12,6 @@ class Solution {
             else
                 i++;
         }
-        return c ;
+        return c;
     }
 }
