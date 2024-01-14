@@ -2,14 +2,12 @@ class Solution {
     public boolean closeStrings(String word1, String word2) {
         HashMap<Character, Integer> map1 = new HashMap<>();
         HashMap<Character, Integer> map2 = new HashMap<>();
-        
         for (char c : word1.toCharArray()) {
             map1.put(c, map1.getOrDefault(c, 0) + 1);
         }
         for (char c : word2.toCharArray()) {
             map2.put(c, map2.getOrDefault(c, 0) + 1);
         }
-        
         List<Character> ar1 = new ArrayList<>(map1.keySet());
         List<Character> ar2 = new ArrayList<>(map2.keySet());
         
